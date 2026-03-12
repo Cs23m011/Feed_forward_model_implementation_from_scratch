@@ -30,3 +30,6 @@ class ActivationFunctions:
   def softmax(self,u):
     x=np.exp(u-np.max(u))
     return x/np.sum(x)
+  
+  def gelu(self,u):
+    return 0.5*u*(1+np.tanh(np.sqrt(2/np.pi)*(u+0.044715*np.power(u,3))))
